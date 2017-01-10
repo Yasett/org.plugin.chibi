@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="icons"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.google.common_1.0.0.201004262004.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.google.guava_15.0.0.v201403281430.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.google.guava.source_15.0.0.v201403281430.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gnu-trove-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gradle-wrapper.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gson-2.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/guava-r07.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/chibi_comparer.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsch-0.1.53.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/junit-3.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lti-civil-no-swt-20070920-1721.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/nanohttpd-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/nanohttpd-webserver-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.core.contenttype_3.4.200.v20140207-1251.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.core.jobs_3.6.1.v20141014-1248.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.core.resources_3.9.1.v20140825-1431.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jdt.core_3.11.0.v20150602-1242.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jdt.core.manipulation_1.5.100.v20141002-1241.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jgit_4.2.1.201601240121.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.osgi_3.10.2.v20150203-1939.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/reflections-0.9.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/rendersnake-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/simmetrics-core-3.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-2.0.99.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-simple-1.6.99.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/trove-2.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/trove-3.0.0a1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/trove-3.0.3-src.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/trove-src-2.0.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

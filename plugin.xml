@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.ui.IEditorInput"
+            nameFilter="*.*"
+            id="org.plugin.chibi.contribution1">
+         <menu
+               label="Snippets"
+               path="additions"
+               id="org.plugin.chibi.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Show Snippets"
+               class="org.plugin.chibi.popup.actions.ShowSnippetAction"
+               menubarPath="org.plugin.chibi.menu1/group1"
+               enablesFor="1" 
+               id="org.plugin.chibi.showSnippetsAction"
+               definitionId="org.plugin.chibi.showSnippetsAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="snippetmarker"
+         name="Code snippet warning"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="false">
+      </persistent>
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+   </extension>
+   <extension
+         id="org.plugin.popupdemo"
+         name="Snippets"
+         point="org.eclipse.ui.views">
+      <category
+            id="org.plugin.chibi"
+            name="Snippets">
+      </category>
+      <view
+            category="org.plugin.chibi"
+            class="org.plugin.chibi.views.SnippetsView"
+            icon="icons/smart.gif"
+            id="org.plugin.chibi.views.Snippets"
+            name="Snippet Suggestions"
+            restorable="true">
+      </view>
+      <view
+            category="org.plugin.chibi"
+            class="org.plugin.chibi.views.SnippetsByProjectView"
+            icon="icons/warning_obj.gif"
+            id="org.plugin.chibi.views.SnippetsByProject"
+            name="Project Snippet Warnings"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.plugin.chibi.showSnippetsAction"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+Alt+S">
+      </key>
+   </extension>
+   
+<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Snippets"
+               mnemonic="M"
+               id="org.plugin.test.menus.snippets">
+            <command
+                  commandId="org.plugin.chibi.showSnippetsAction"
+                  mnemonic="S"
+                  id="org.plugin.chibi.menus.ShowSnippetsCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="org.plugin.chibi.commandPackage"
+               label="Find Warnings"
+               style="push"
+               tooltip="Searches for potential snippet warnings in the project">
+         </command>
+      </menuContribution>
+   </extension>
+   
+<extension point="org.eclipse.ui.commands">
+	<category
+            name="Snippets Category"
+            id="org.plugin.chibi.commands.category">
+      </category>
+	<command
+       categoryId="org.plugin.chibi.commands.category"
+       id="org.plugin.chibi.showSnippetsAction"
+       name="ShowSnippetsCommand"/>
+       <command
+            defaultHandler="org.plugin.chibi.handlers.PackagePopupHandler"
+            id="org.plugin.chibi.commandPackage"
+            name="FindWarningsCommand">
+      </command>
+</extension>
+<extension
+      point="org.eclipse.ui.handlers">
+   <handler
+         class="org.plugin.chibi.handlers.EditorPopupHandler"
+         commandId="org.plugin.chibi.showSnippetsAction">
+   </handler>
+</extension>
+<extension
+      point="org.eclipse.ui.decorators">
+   <decorator
+         adaptable="true"
+         class="org.plugin.chibi.decorators.SnippetWarningDecorator"
+         icon="icons/warning_obj.gif"
+         id="org.plugin.chibi.snippetwarningdecorator"
+         label="Snippet warning"
+         lightweight="true"
+         location="TOP_LEFT"
+         state="true">
+         <enablement>
+			<objectClass name="org.eclipse.core.resources.IResource"/>   
+		</enablement>
+   </decorator>
+</extension>
+</plugin>
